@@ -1,0 +1,8 @@
+//En carpeta lib
+//variables definidas dentro de este archivo son unicos y no se reinician
+//al llamar la misma funcion desde otros archivos
+//module.exports = {objeto}; multiples funciones
+//module.exports = nombreFuncion;
+
+//En js
+//var rot13 = require('./lib/rot13.js').nombreFuncion;
