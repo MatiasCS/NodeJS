@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socket.io</title>
+    <style type="text/css">
+        form {
+            width: 500px;
+            margin: auto;
+        }
+        input {
+            font-size: 24px;
+            display: block;
+        }
+        textarea {
+            font-size: 24px;
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<h2>Hola Mundo</h2>
+
+<form id="chat">
+    <input type="text" id="user" placeholder="Nickname">
+    <input type="text" id="msg" placeholder="Ingresa un mensaje">
+    <button>Enviar Mensaje</button>
+    <ul id="messages"></ul>
+</form>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/socket.io-client/socket.io.js"></script>
+
+<script>
+$(function() {
+  var chat = io.connect('http://localhost:3000/chat');
+
+  $messages = $('#messages');
+  $msg = $('#msg');
+  $user = $('#user');
+  $('#chat').on('submit', function(e) {
+    e.preventDefault();
+    chat.emit('msg:new', {
+        user: $user.val(),
+        msg: $msg.val()
+    });
+    $messages.append("<li>"+ $user.val() + ": " + $msg.val() + "</li>");
+  });
+
+  // Recibir mensaje nuevo y agregarlo a la lista de mensajes
+  chat.on('msg:created', function(data) {
+    $messages.append("<li>"+ data.user + ": " + data.msg + "</li>");
+  });
+});
+</script>
+</body>
+</html>
