@@ -1,0 +1,41 @@
+Arguments: 
+  /home/matias/.nvm/versions/node/v6.4.0/bin/node /home/matias/.nvm/versions/node/v6.4.0/bin/yarn add chai mocha --save-dev
+
+PATH: 
+  /home/matias/anaconda2/bin:/home/matias/.nvm/versions/node/v6.4.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+
+Yarn version: 
+  0.16.1
+
+Node version: 
+  6.4.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "clase10",
+    "version": "1.0.0",
+    "description": "ejercicio final",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Matias Campos",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+bower manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com registry.yarnpkg.com:443
+      at errnoException (dns.js:28:10)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:79:26)
