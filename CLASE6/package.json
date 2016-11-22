@@ -9,7 +9,11 @@
   "author": "Matias Campos",
   "license": "ISC",
   "dependencies": {
-    "sequelize": "^3.24.3",
-    "sqlite3": "^3.1.6"
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "moment": "^2.16.0",
+    "ramda": "^0.22.1",
+    "sequelize": "^3.27.0",
+    "sqlite3": "^3.1.8"
   }
 }

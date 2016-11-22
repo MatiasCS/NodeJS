@@ -14,7 +14,8 @@ describe('fibonacci', function(){
 		});
 
 		it('should accept integer types as a parameter',()=>{
-			//logica
+			expect(fib.fibonacci.bind(fib, 'yo')).to.throw(Error);
+			expect(fib.fibonacci.bind(fib, 2.5)).to.throw(Error);
 		});
 	});
 });
